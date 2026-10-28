@@ -1430,6 +1430,7 @@ void reset_area( AREA_DATA *pArea )
 		{
 		    obj=create_object(pObjIndex,UMIN(number_fuzzy(level),
 		    LEVEL_HERO - 1));
+#if 0 // by prool
 		    /* error message if it is too high */
 		    if (obj->level > mob->level + 3
 		    ||  (obj->item_type == ITEM_WEAPON 
@@ -1439,6 +1440,7 @@ void reset_area( AREA_DATA *pArea )
 			    "Err: obj %s (%d) -- %d, mob %s (%d) -- %d\n",
 			    obj->short_descr,obj->pIndexData->vnum,obj->level,
 			    mob->short_descr,mob->pIndexData->vnum,mob->level);
+#endif
 		}
 		else
 		    break;
